@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'inter': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +65,30 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Café-specific colors
+				coffee: {
+					dark: 'hsl(var(--coffee-dark))',
+					medium: 'hsl(var(--coffee-medium))',
+					light: 'hsl(var(--coffee-light))',
+				},
+				cream: 'hsl(var(--cream))',
+				'warm-white': 'hsl(var(--warm-white))',
+				espresso: 'hsl(var(--espresso))',
+			},
+			backgroundImage: {
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-warm': 'var(--gradient-warm)',
+				'gradient-coffee': 'var(--gradient-coffee)',
+			},
+			boxShadow: {
+				'warm': 'var(--shadow-warm)',
+				'elegant': 'var(--shadow-elegant)',
+				'coffee': 'var(--shadow-coffee)',
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'bounce': 'var(--transition-bounce)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

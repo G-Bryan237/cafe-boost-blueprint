@@ -1,42 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Café-inspired design system with warm, inviting colors */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Warm, café-inspired color palette */
+    --background: 44 20% 97%;
+    --foreground: 25 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 25 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 25 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Rich coffee brown as primary */
+    --primary: 25 45% 25%;
+    --primary-foreground: 44 20% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm cream secondary */
+    --secondary: 44 30% 92%;
+    --secondary-foreground: 25 45% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Soft muted tones */
+    --muted: 44 15% 90%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Warm accent */
+    --accent: 35 65% 75%;
+    --accent-foreground: 25 45% 25%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 44 20% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 44 15% 88%;
+    --input: 44 15% 88%;
+    --ring: 25 45% 25%;
 
-    --radius: 0.5rem;
+    /* Coffee-inspired custom colors */
+    --coffee-dark: 25 50% 20%;
+    --coffee-medium: 25 45% 35%;
+    --coffee-light: 35 40% 60%;
+    --cream: 44 40% 95%;
+    --warm-white: 44 20% 98%;
+    --espresso: 25 55% 15%;
+    
+    /* Beautiful gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(25 45% 25%), hsl(25 50% 20%));
+    --gradient-warm: linear-gradient(45deg, hsl(44 40% 95%), hsl(44 30% 92%));
+    --gradient-coffee: linear-gradient(180deg, hsl(25 45% 35%), hsl(25 50% 20%));
+    
+    /* Elegant shadows */
+    --shadow-warm: 0 4px 20px hsl(25 45% 25% / 0.1);
+    --shadow-elegant: 0 8px 30px hsl(25 45% 25% / 0.15);
+    --shadow-coffee: 0 0 40px hsl(25 45% 25% / 0.2);
+    
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
