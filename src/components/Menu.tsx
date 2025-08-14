@@ -74,19 +74,15 @@ const Menu = () => {
         </div>
 
         {/* Menu Categories */}
-        <div className="space-y-16">
+        <div className="space-y-8">
           {menuCategories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
               {/* Category Header */}
-              <div className="flex items-center justify-center mb-8">
-                <div className="flex items-center bg-card rounded-lg p-4 shadow-warm">
-                  <div className="w-12 h-12 bg-gradient-coffee rounded-full flex items-center justify-center mr-4">
-                    <category.icon className="w-6 h-6 text-warm-white" />
-                  </div>
-                  <h3 className="text-2xl font-playfair font-bold text-primary">
-                    {category.title}
-                  </h3>
+              <div className="flex items-center bg-card rounded-lg p-3 shadow mb-4">
+                <div className="w-10 h-10 bg-gradient-coffee rounded-full flex items-center justify-center mr-3">
+                  <category.icon className="w-5 h-5 text-warm-white" />
                 </div>
+                <h3 className="text-xl font-bold">{category.title}</h3>
               </div>
 
               {/* Menu Items Grid */}
