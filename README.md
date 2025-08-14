@@ -1,22 +1,27 @@
-# Welcome to your Lovable project
+# Welcome to Roasted Dreams Café
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/74db8f52-15cb-4716-ac80-6b66bb0aad16
+Roasted Dreams Café is a locally owned coffee shop in the heart of downtown, serving artisan coffee, fresh pastries, and light meals in a warm, community-focused atmosphere. Founded in 2018 by Sarah Martinez, our café is dedicated to quality, sustainability, and building connections—one cup at a time.
+
+- **Location:** 123 Coffee Street, Downtown District, City, State 12345  
+- **Hours:**  
+  - Mon–Fri: 6:00 AM – 8:00 PM  
+  - Sat–Sun: 7:00 AM – 9:00 PM  
+- **Contact:**  
+  - Phone: (123) 456-7890  
+  - Email: hello@roasteddreams.cafe  
+  - Instagram: [@roasteddreams](https://instagram.com/roasteddreams)  
+  - Facebook: [RoastedDreamsCafe](https://facebook.com/RoastedDreamsCafe)  
+  - Twitter: [@roasted_dreams](https://twitter.com/roasted_dreams)
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/74db8f52-15cb-4716-ac80-6b66bb0aad16) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -27,7 +32,7 @@ Follow these steps:
 git clone <YOUR_GIT_URL>
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd cafe-boost-blueprint
 
 # Step 3: Install the necessary dependencies.
 npm i
@@ -62,12 +67,47 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/74db8f52-15cb-4716-ac80-6b66bb0aad16) and click on Share -> Publish.
+You can deploy this project using any modern frontend hosting provider, such as:
 
-## Can I connect a custom domain to my Lovable project?
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [Render](https://render.com/)
+
+**Basic deployment steps:**
+
+1. Push your code to a GitHub repository.
+2. Connect your repository to your chosen deployment provider.
+3. Set the build command to `npm run build` and the output directory to `dist`.
+4. Deploy and preview your live site.
+
+## Can I connect a custom domain to my project?
 
 Yes, you can!
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+To connect a domain, use your deployment provider's domain management settings.  
+Follow their instructions to point your domain to your deployed site.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+
+**About Roasted Dreams Café**
+
+- **Signature Offerings:**  
+  - House Blend Coffee, Cappuccino, Lattes, Cold Brew  
+  - Fresh pastries: croissants, muffins, scones, cookies  
+  - Light meals: avocado toast, sandwiches, salads  
+  - Sweet treats: cheesecake, tiramisu, brownies, macarons
+
+- **Community Impact:**  
+  - $15K+ donated to local schools  
+  - 25+ community events sponsored  
+  - 150+ local meetings hosted
+
+- **Our Values:**  
+  - Passion for Coffee  
+  - Community First  
+  - Quality Standards  
+  - Sustainability
+
+We look forward to welcoming you to Roasted Dreams Café, where every cup supports local farmers and sustainable practices. Join us in our mission to make the world a better place, one delicious sip at a time!
+
