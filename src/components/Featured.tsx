@@ -39,15 +39,19 @@ const Featured = () => {
         {/* Feature Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
-            <Card key={index} className="text-center border-0 shadow-warm hover:shadow-elegant transition-all duration-300 bg-card/80 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-coffee rounded-full flex items-center justify-center shadow-coffee">
-                  <feature.icon className="w-8 h-8 text-warm-white" />
+            <Card
+              key={index}
+              className="text-center border-0 shadow-warm hover:shadow-elegant transition-all duration-300 bg-card/80 backdrop-blur-sm
+                w-full max-w-xs mx-auto md:max-w-none md:w-auto"
+            >
+              <CardContent className="p-6 md:p-8">
+                <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-4 md:mb-6 bg-gradient-coffee rounded-full flex items-center justify-center shadow-coffee">
+                  <feature.icon className="w-7 h-7 md:w-8 md:h-8 text-warm-white" />
                 </div>
-                <h3 className="text-xl font-playfair font-semibold text-primary mb-3">
+                <h3 className="text-lg md:text-xl font-playfair font-semibold text-primary mb-2 md:mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground font-inter leading-relaxed">
+                <p className="text-sm md:text-base text-muted-foreground font-inter leading-relaxed">
                   {feature.description}
                 </p>
               </CardContent>
@@ -56,68 +60,60 @@ const Featured = () => {
         </div>
 
         {/* Featured Items */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="flex flex-col md:flex-row md:gap-12 gap-8">
           {/* Coffee Feature */}
-          <div className="order-2 lg:order-1">
-            <div className="relative">
+          <div className="w-full md:w-1/2">
+            <div className="relative mb-4">
               <img
                 src={coffeeImage}
                 alt="Artisan Coffee"
-                className="w-full h-80 object-cover rounded-lg shadow-elegant"
+                className="w-full h-56 object-cover rounded-lg"
               />
-              <div className="absolute top-4 left-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-inter font-medium">
+              <div className="absolute top-3 left-3 bg-accent text-xs px-2 py-1 rounded-full">
                 Customer Favorite
               </div>
             </div>
-          </div>
-          <div className="order-1 lg:order-2">
-            <h3 className="text-3xl font-playfair font-bold text-primary mb-4">
-              Signature House Blend
-            </h3>
-            <p className="text-muted-foreground mb-6 font-inter text-lg leading-relaxed">
-              Our carefully curated blend of Ethiopian and Colombian beans, roasted to perfection. 
-              Notes of chocolate, caramel, and a hint of citrus create a smooth, balanced cup that's 
+            <h3 className="text-2xl font-bold mb-2">Signature House Blend</h3>
+            <p className="text-base mb-4">
+              Our carefully curated blend of Ethiopian and Colombian beans, roasted to perfection.
+              Notes of chocolate, caramel, and a hint of citrus create a smooth, balanced cup that's
               become the heart of our café.
             </p>
-            <div className="flex items-center space-x-4 mb-6">
-              <span className="text-2xl font-playfair font-bold text-primary">$4.50</span>
-              <span className="text-muted-foreground font-inter">Available hot or iced</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <span className="text-xl font-bold">$4.50</span>
+              <span className="text-muted-foreground text-sm">Available hot or iced</span>
             </div>
-            <Button variant="cafe" size="lg">
+            <Button className="w-full py-3">
               Order Now
             </Button>
           </div>
-        </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mt-16">
           {/* Pastries Feature */}
-          <div>
-            <h3 className="text-3xl font-playfair font-bold text-primary mb-4">
-              Fresh Daily Pastries
-            </h3>
-            <p className="text-muted-foreground mb-6 font-inter text-lg leading-relaxed">
-              Start your morning right with our selection of buttery croissants, seasonal muffins, 
-              and artisan breads. All baked fresh daily using traditional techniques and the finest ingredients.
-            </p>
-            <div className="flex items-center space-x-4 mb-6">
-              <span className="text-2xl font-playfair font-bold text-primary">From $2.95</span>
-              <span className="text-muted-foreground font-inter">Gluten-free options available</span>
-            </div>
-            <Button variant="warm" size="lg">
-              See Full Menu
-            </Button>
-          </div>
-          <div>
-            <div className="relative">
+          <div className="w-full md:w-1/2">
+            <div className="relative mb-4">
               <img
                 src={pastriesImage}
                 alt="Fresh Pastries"
-                className="w-full h-80 object-cover rounded-lg shadow-elegant"
+                className="w-full h-56 object-cover rounded-lg"
               />
-              <div className="absolute top-4 right-4 bg-coffee-medium text-warm-white px-3 py-1 rounded-full text-sm font-inter font-medium">
+              <div className="absolute top-3 right-3 bg-coffee-medium text-warm-white text-xs px-2 py-1 rounded-full">
                 Baked Fresh Daily
               </div>
             </div>
+            <h3 className="text-2xl font-bold mb-2">
+              Fresh Daily Pastries
+            </h3>
+            <p className="text-base mb-4">
+              Start your morning right with our selection of buttery croissants, seasonal muffins,
+              and artisan breads. All baked fresh daily using traditional techniques and the finest ingredients.
+            </p>
+            <div className="flex items-center space-x-3 mb-4">
+              <span className="text-xl font-bold">From $2.95</span>
+              <span className="text-muted-foreground text-sm">Gluten-free options available</span>
+            </div>
+            <Button variant="warm" className="w-full py-3">
+              See Full Menu
+            </Button>
           </div>
         </div>
       </div>
