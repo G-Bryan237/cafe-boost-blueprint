@@ -52,36 +52,39 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
-          {/* Contact Information */}
-          <div className="lg:col-span-1 space-y-6">
-            {contactInfo.map((info, index) => (
-              <Card key={index} className="border-0 shadow-warm hover:shadow-elegant transition-all duration-300">
-                <CardHeader className="pb-3">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-coffee rounded-full flex items-center justify-center">
-                      <info.icon className="w-5 h-5 text-warm-white" />
+        {/* New Structure: Contact Info & Social on Left, Form Center, Map Right (Stacked on mobile) */}
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-5">
+          {/* Left: Contact Info & Social (col-span-2) */}
+          <div className="space-y-6 lg:col-span-2">
+            <Card className="border-0 shadow-warm hover:shadow-elegant transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="text-lg font-playfair text-primary">
+                  Contact Information
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  {contactInfo.map((info, index) => (
+                    <div key={index} className="flex items-start space-x-3 mb-2">
+                      <div className="w-10 h-10 bg-gradient-coffee rounded-full flex items-center justify-center mt-1">
+                        <info.icon className="w-5 h-5 text-warm-white" />
+                      </div>
+                      <div>
+                        <div className="font-playfair font-semibold text-primary">{info.title}</div>
+                        {info.details.map((detail, detailIndex) => (
+                          <p key={detailIndex} className="text-muted-foreground font-inter text-sm">
+                            {detail}
+                          </p>
+                        ))}
+                        <Button variant="link" size="sm" className="px-0 mt-1">
+                          {info.action}
+                        </Button>
+                      </div>
                     </div>
-                    <CardTitle className="text-lg font-playfair text-primary">
-                      {info.title}
-                    </CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <div className="space-y-1 mb-4">
-                    {info.details.map((detail, detailIndex) => (
-                      <p key={detailIndex} className="text-muted-foreground font-inter text-sm">
-                        {detail}
-                      </p>
-                    ))}
-                  </div>
-                  <Button variant="outline" size="sm" className="w-full">
-                    {info.action}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
             {/* Social Media */}
             <Card className="border-0 shadow-warm">
               <CardHeader>
@@ -90,25 +93,25 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3">
+                <div className="flex flex-row gap-4">
                   {socialLinks.map((social, index) => (
-                    <div key={index} className="flex items-center space-x-3 p-2 rounded hover:bg-accent/50 transition-colors">
-                      <social.icon className="w-5 h-5 text-coffee-medium" />
-                      <div>
-                        <div className="font-inter font-medium text-primary text-sm">{social.name}</div>
-                        <div className="text-muted-foreground text-xs">{social.handle}</div>
-                      </div>
-                    </div>
+                    <a
+                      key={index}
+                      href="#"
+                      className="flex flex-col items-center text-center hover:text-accent transition-colors"
+                    >
+                      <social.icon className="w-7 h-7 mb-1 text-coffee-medium" />
+                      <span className="text-xs font-inter">{social.name}</span>
+                    </a>
                   ))}
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          {/* Contact Form & Map */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Contact Form */}
-            <Card className="border-0 shadow-warm">
+          {/* Center: Contact Form (col-span-2) */}
+          <div className="lg:col-span-2 flex flex-col">
+            <Card className="border-0 shadow-warm flex-1">
               <CardHeader>
                 <CardTitle className="text-2xl font-playfair text-primary">
                   Send Us a Message
@@ -153,32 +156,6 @@ const Contact = () => {
                 </Button>
               </CardContent>
             </Card>
-
-            {/* Map Placeholder */}
-            <Card className="border-0 shadow-warm">
-              <CardContent className="p-0">
-                <div className="h-64 bg-gradient-warm rounded-lg flex items-center justify-center relative overflow-hidden">
-                  {/* Map placeholder with attractive styling */}
-                  <div className="text-center">
-                    <MapPin className="w-16 h-16 text-coffee-medium mx-auto mb-4" />
-                    <h3 className="text-xl font-playfair font-semibold text-primary mb-2">
-                      Find Us Downtown
-                    </h3>
-                    <p className="text-muted-foreground font-inter">
-                      123 Coffee Street, Downtown District
-                    </p>
-                    <Button variant="outline" className="mt-4">
-                      Open in Google Maps
-                    </Button>
-                  </div>
-                  
-                  {/* Decorative elements */}
-                  <div className="absolute top-4 left-4 w-3 h-3 bg-accent rounded-full animate-pulse"></div>
-                  <div className="absolute bottom-6 right-6 w-2 h-2 bg-coffee-light rounded-full animate-pulse delay-1000"></div>
-                  <div className="absolute top-1/3 right-8 w-4 h-4 bg-coffee-medium/30 rounded-full animate-pulse delay-500"></div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
 
@@ -195,7 +172,11 @@ const Contact = () => {
               <Button variant="warm" size="lg" className="min-w-[200px]">
                 Order Ahead Online
               </Button>
-              <Button variant="outline" size="lg" className="min-w-[200px] border-warm-white text-warm-white hover:bg-warm-white hover:text-coffee-dark">
+              <Button
+                size="lg"
+                className="min-w-[200px] bg-wood-brown text-warm-white border-none"
+                style={{ backgroundColor: "#8B5C2A" }} // Example brown
+              >
                 Reserve a Table
               </Button>
             </div>
